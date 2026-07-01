@@ -60,7 +60,7 @@
     <p>A paz de Jesus, o amor de Maria e as bençãos de São José! Ela prometeu fazer cair sobre nós chuva de rosas, hoje vamos nos aprofundar da história dessa santinha tão amada por tantos.</p>
 <h2>A infância de Tereza</h2>
   <p>Marie-Françoise-Thérèse Martin nasceu na França, em 1873. Desde muito pequena, ela era uma menina muito sensível e muito apegada à sua família. Quando ela tinha apenas 4 anos, sua mãe faleceu, o que foi um golpe muito duro para ela. Teresa ficou ainda mais tímida e chorava por qualquer coisa. No entanto, ela sempre teve um amor muito profundo por Deus, inspirado pelo exemplo de seus pais e de suas irmãs mais velhas.</p>
-<h2>O chamado e a 'Pequena Via'<h2> 
+<h2>O chamado e a 'Pequena Via'</h2> 
   <p>Com apenas 15 anos, Teresa sentiu um desejo enorme de se dedicar totalmente à vida religiosa. Ela queria entrar para o mosteiro das Carmelitas, mas era considerada jovem demais. Ela não desistiu: viajou até Roma e chegou a pedir permissão diretamente ao Papa! Pouco tempo depois, ela conseguiu realizar seu sonho. Dentro do mosteiro, ela percebeu que não precisava fazer grandes sacrifícios ou atos heroicos para ser santa. Ela criou o que chamava de "Pequena Via": um caminho de santidade baseado em fazer as tarefas do dia a dia com um amor gigante.</p>
 <h2>O Sorriso e os Últimos Anos</h2>
    <p>Teresa enfrentou momentos difíceis, incluindo a tuberculose, uma doença grave na época. Mesmo sentindo muitas dores, ela raramente reclamava e tentava sempre manter um sorriso no rosto para não preocupar as outras freiras. Ela faleceu muito jovem, com apenas 24 anos, em 1897. Antes de morrer, ela prometeu que passaria o seu céu fazendo o bem na Terra e que mandaria uma "chuva de rosas" (que representam as graças e bênçãos) para quem pedisse sua ajuda.</p>
@@ -74,9 +74,15 @@ A cura de uma jovem noviça: Uma freira chamada Irmã Charles sofria de uma grav
 A cura de uma criança: Um menino que sofria de uma cegueira severa recuperou a visão completamente após sua família rezar e pedir a ajuda da santa carmelita.
 
 Esses e outros episódios fizeram com que o Papa Pio XI a canonizasse em 1925, chamando-a de "uma tempestade de milagres".</p>
- 
- 
- 
+ <h2>Conclusão: O Legado de Amor de Santa Terezinha</h2>
+   <p>Muito obrigado por acompanhar a história de Santa Terezinha do Menino Jesus aqui no blog! Que o exemplo de sua "Pequena Via" nos inspire a colocar mais amor nas pequenas atitudes do nosso dia a dia. Se você gostou de conhecer mais sobre a vida, as promessas e os milagres da Santa das Rosas, não se esqueça de compartilhar este post com seus amigos e familiares, e deixe seu comentário contando o que mais te emocionou. Até a próxima leitura!</p>
+<h2>Fontes e Referências:</h2>
+    <p>Vatican News (Histórico de canonização e biografia oficial dos santos).
+
+Livro: História de uma Alma (Autobiografia de Santa Teresa do Menino Jesus).
+
+Portal Canção Nova / Editora Cléofas (Artigos teológicos sobre a Novena das Rosas e os milagres documentados).</p>
+
   <button>🩵 <span>0</span></button>
    <button>💩 <span>0</span></button>
    
@@ -88,12 +94,19 @@ Esses e outros episódios fizeram com que o Papa Pio XI a canonizasse em 1925, c
   const botoes = document.querySelectorAll('button');
 
    botoes.forEach(function(botao){
+      let curtiu = false;
   botao.addEventListener('click', botaoClicado);
 
   function botaoClicado(){
     console.log('fui clicado');
     let texto = botao.querySelector('span');
-    texto.textContent++;
+    if (curtiu === false){
+       texto.textContent++;
+       cutiu = true;
+      } else{
+        texto.textContent--;
+        curtiu = false;
+      }
   }    
 
    })
